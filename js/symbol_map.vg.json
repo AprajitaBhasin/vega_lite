@@ -5,7 +5,7 @@
   },
   "vconcat": [
     {
-      "width": "container",
+      "width": 500,
       "height": 400,
       "title": "Fires from Space: Australia",
       "projection": {"type": "equirectangular"},
@@ -62,7 +62,7 @@
       ]
     },
     {
-      "width": "container",
+      "width": 500,
       "height": 60,
       "mark": "line",
       "title": "Use this line chart to filter out the data based on time",
@@ -86,7 +86,7 @@
       }
     },
     {
-      "width": "container",
+      "width": 500,
       "transform": [
         {
           "bin": {"step": 50, "extent": [300,500]},
