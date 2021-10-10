@@ -91,7 +91,7 @@
         {
           "bin": {"step": 50, "extent": [300,500]},
           "field": "brightness",
-          "as": "brightness "
+          "as": "brightness"
         }
       ],
       "mark": "area",
