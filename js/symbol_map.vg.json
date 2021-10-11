@@ -7,7 +7,7 @@
     {
       "width": "container",
       "height": 400,
-      "title": "Fires from Space: Australia",
+      "title": "A geographic representation of Australian fires from space",
       "projection": {"type": "equirectangular"},
       "layer": [
         {
