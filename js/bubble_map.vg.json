@@ -23,8 +23,8 @@
         "input": "select",
         "options": [
           null,
-          "Day",
-          "Night"
+          "D",
+          "N"
       
         ],
         "labels": [
