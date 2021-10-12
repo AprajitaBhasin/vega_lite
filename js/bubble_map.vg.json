@@ -37,7 +37,7 @@
     }
 
   ],
-  "width": 600,
+  "width": 800,
   "height": 400,
   "transform": [
     {"filter": "datum.frp > 0"},
@@ -105,8 +105,18 @@
         "color": {"value": "#800000"},
         "size": {"value": 3}
       }
+      },
 
-  }
+      {
+        "mark": {"type": "text", "style": "label", "align": "left", "dx":-340, "dy": -10,"font":"sans-serif"},
+        "encoding": {
+          "y":{"aggregate": "mean", "field": "brightness"},
+          "text": {"aggregate": "mean", "field": "brightness"}
+        }
+
+      }
+
+
   ],
 
 "config": {"title": {"font": "sans-serif", "fontSize": 14}}
