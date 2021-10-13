@@ -35,8 +35,10 @@
       "filter": "daynight_selection == null || datum.daynight == daynight_selection"
     }
   ],
-  "layer": [
+  
 
+  "layer": [
+ 
     {
       "mark": {
         "type": "circle",
@@ -44,8 +46,6 @@
         "stroke": "black",
         "strokeWidth": 0.3
       },
-
-      
       "encoding": {
         "x": {
           "field": "frp",
@@ -57,17 +57,26 @@
         "y": {
           "field": "brightness",
           "type": "quantitative",
-          "axis": {"title": "Brightness (Kelvin)"}
+          "axis": {"title": "Brightness (Kelvin)"},
+          "scale": {"domain": [200,550]}
         },
         "size": {
           "field": "confidence",
           "type": "quantitative",
           "title": "Confidence (%)",
-          "legend": {"clipHeight": 30},
-          "scale": {"rangeMax": 100}
+          "legend": {"clipHeight": 30}
         },
-        "color": {"field": "daynight", "type": "nominal", "title": "Day/Night", "condition": {"test": "datum['frp'] > 3000", "value":"#7f0000"}},
 
+        "color": {
+          "field": "daynight",
+          "type": "nominal",
+          "title": "Day/Night",
+          "condition": {"test": "datum['frp'] > 3000", "value": "#7f0000"},
+          "scale": {
+            "domain": ["D", "N"],
+            "range": ["#e7ba52", "#696969"]
+          }
+        },
         "tooltip": [
           {"field": "frp", "title": "FRP (MW)", "type": "quantitative"},
           {
@@ -103,7 +112,9 @@
         "style": "label",
         "align": "left",
         "dx": 3,
-        "font": "sans-serif"
+        "dy":120,
+        "font": "sans-serif",
+        "fontWeight":"bold"
       },
       "encoding": {
         "x": {"aggregate": "mean", "field": "frp"},
@@ -123,17 +134,16 @@
         "type": "text",
         "style": "label",
         "align": "left",
-        "dx": -340,
+        "dx": -400,
         "dy": -10,
-        "font": "sans-serif"
+        "font": "sans-serif",
+        "fontWeight":"bold"
       },
       "encoding": {
         "y": {"aggregate": "mean", "field": "brightness"},
         "text": {"aggregate": "mean", "field": "brightness"}
       }
     }
-
-
   ],
   "config": {"title": {"font": "sans-serif", "fontSize": 14}}
 }
