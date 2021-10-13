@@ -37,7 +37,7 @@
     }
 
   ],
-  "width": "container",
+  "width": 900,
   "height": 400,
   "transform": [
     {"filter": "datum.frp > 0"},
