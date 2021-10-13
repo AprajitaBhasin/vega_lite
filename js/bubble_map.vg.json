@@ -39,6 +39,7 @@
   ],
   "width": 900,
   "height": 400,
+  "title": "An analysis of FRP, Brightness and Confidence",
   "transform": [
     {"filter": "datum.frp > 0"},
     {"filter": "datum.confidence > Confidence_above"},
