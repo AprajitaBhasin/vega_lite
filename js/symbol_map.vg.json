@@ -32,9 +32,9 @@
               }
             },
             "tooltip": [
-              {"field": "acq_date", "type": "temporal"},
-              {"field": "brightness", "type": "quantitative"},
-              {"field": "satellite", "type": "nominal"}
+              {"field": "acq_date", "title": "Data Acquisition Date","type": "temporal"},
+              {"field": "brightness","title":"Brightness (Kelvin)", "type": "quantitative"},
+              {"field": "satellite", "title": "Satellite","type": "nominal"}
             ]
           },
           "layer": [
@@ -77,6 +77,7 @@
         },
         "y": {
           "aggregate": "count",
+          "field":"brightness",
           "axis": {"tickCount": 3, "grid": false},
           "title": "Count"
         }
@@ -106,7 +107,13 @@
             "range": ["#fdbe85", "#fd8d3c", "#e6550d", "#bd0026", "#7f0000"]
           },
           "legend": null
-        }
+        },
+
+        "tooltip": [
+          {"field": "acq_date", "title": "Data Acquisition Date","type": "temporal"},
+          {"field": "brightness","title":"Brightness (Kelvin)", "type": "quantitative"},
+          {"field":"brightness", "aggregate":"count"}
+        ]
       }
     }
   ],
