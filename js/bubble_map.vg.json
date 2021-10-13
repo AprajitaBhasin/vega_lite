@@ -66,7 +66,7 @@
           "legend": {"clipHeight": 30},
           "scale": {"rangeMax": 100}
         },
-        "color": {"field": "daynight", "type": "nominal", "title": "Day/Night", "condition": {"test": "datum['frp'] > 3000", "value":"#800000"}},
+        "color": {"field": "daynight", "type": "nominal", "title": "Day/Night", "condition": {"test": "datum['frp'] > 3000", "value":"#7f0000"}},
 
         "tooltip": [
           {"field": "frp", "title": "FRP (MW)", "type": "quantitative"},
@@ -93,7 +93,7 @@
       "mark": "rule",
       "encoding": {
         "x": {"aggregate": "mean", "field": "frp"},
-        "color": {"value": "#800000"},
+        "color": {"value": "#7f0000"},
         "size": {"value": 3}
       }
     },
@@ -114,7 +114,7 @@
       "mark": "rule",
       "encoding": {
         "y": {"aggregate": "mean", "field": "brightness"},
-        "color": {"value": "#800000"},
+        "color": {"value": "#7f0000"},
         "size": {"value": 3}
       }
     },
