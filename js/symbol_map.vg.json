@@ -13,10 +13,7 @@
         {
           "data": {
             "url": "https://raw.githubusercontent.com/AprajitaBhasin/vega_lite/main/1_symbol_map/js/australian-states.json",
-            "format": {
-              "type": "topojson",
-              "feature": "australian-states"
-            }
+            "format": {"type": "topojson", "feature": "australian-states"}
           },
           "mark": {"type": "geoshape", "fill": "lightgray", "stroke": "white"}
         },
@@ -31,7 +28,7 @@
               "scale": {
                 "type": "threshold",
                 "domain": [350, 400, 450, 500],
-              "range": ["#fdbe85", "#fd8d3c", "#e6550d", "#bd0026", "#7f0000"]
+                "range": ["#fdbe85", "#fd8d3c", "#e6550d", "#bd0026", "#7f0000"]
               }
             },
             "tooltip": [
@@ -76,7 +73,7 @@
         "x": {
           "field": "acq_date",
           "timeUnit": "yearmonthdate",
-          "axis": {"title": "", "format": "%x"}
+          "axis": {"title": "", "tickCount": 5, "grid": true}
         },
         "y": {
           "aggregate": "count",
@@ -89,7 +86,7 @@
       "width": "container",
       "transform": [
         {
-          "bin": {"step": 50, "extent": [300,500]},
+          "bin": {"step": 50, "extent": [300, 500]},
           "field": "brightness",
           "as": "brightness"
         }
@@ -106,8 +103,7 @@
         "color": {
           "field": "brightness",
           "scale": {
-
-              "range": ["#fdbe85", "#fd8d3c", "#e6550d", "#bd0026", "#7f0000"]
+            "range": ["#fdbe85", "#fd8d3c", "#e6550d", "#bd0026", "#7f0000"]
           },
           "legend": null
         }
