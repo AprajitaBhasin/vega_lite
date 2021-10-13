@@ -3,7 +3,6 @@
   "data": {
     "url": "https://raw.githubusercontent.com/AprajitaBhasin/vega_lite/main/1_symbol_map/data/fire_archive_M6_96619.csv"
   },
-
   "params": [
     {
       "name": "Confidence_above",
@@ -16,26 +15,15 @@
         "name": "Minimum Confidence: "
       }
     },
-
-        {
+    {
       "name": "daynight_selection",
       "bind": {
         "input": "select",
-        "options": [
-          null,
-          "D",
-          "N"
-      
-        ],
-        "labels": [
-          "Show All",
-          "Day",
-          "Night"
-        ],
+        "options": [null, "D", "N"],
+        "labels": ["Show All", "Day", "Night"],
         "name": "Day/Night Selection: "
       }
     }
-
   ],
   "width": 900,
   "height": 400,
@@ -43,82 +31,109 @@
   "transform": [
     {"filter": "datum.frp > 0"},
     {"filter": "datum.confidence > Confidence_above"},
-    {"filter": "daynight_selection == null || datum.daynight == daynight_selection"}
+    {
+      "filter": "daynight_selection == null || datum.daynight == daynight_selection"
+    }
   ],
-
   "layer": [
-    {"mark": {
-      "type": "circle",
-      "opacity": 0.8,
-      "stroke": "black",
-      "strokeWidth": 0.3
-    },
-    "encoding": {
-      "x": {
-        "field": "frp",
-        "type": "quantitative",
-        "title": "Fire Radiative Power (Megawatts)",
-        "axis": {"grid": false},
-        "scale": {"type": "log", "domain": [1,5000] }
-      },
-      "y": {"field": "brightness", "type": "quantitative", "axis": {"title": "Brightness (Kelvin)"}},
-      "size": {
-        "field": "confidence",
-        "type": "quantitative",
-        "title": "Confidence (%)",
-        "legend": {"clipHeight": 30},
-        "scale": {"rangeMax": 100}
-      },
-      "color": {"field": "daynight", "type": "nominal", "title": "Day/Night"},
-
-      "tooltip": [
-        {"field": "frp", "title": "FRP (MW)","type": "quantitative"},
-        { "aggregate": "mean", "field": "frp", "title": "Average FRP (MW)","type": "quantitative"},
-        {"field": "brightness", "title": "Brightness (K)","type": "quantitative"},
-        {"field": "confidence", "title": "Confidence (%)","type": "quantitative"}
-      ]
-    
-    
-    } },
 
     {
-      "mark": "rule",
-
-      "encoding": {
-        "x":{"aggregate": "mean", "field": "frp"},
-        "color": {"value": "#800000"},
-        "size": {"value": 3}
-      } },
-
-      {
-        "mark": {"type": "text", "style": "label", "align": "left", "dx":3, "font":"sans-serif"},
-        "encoding": {
-          "x":{"aggregate": "mean", "field": "frp"},
-          "text": {"aggregate": "mean", "field": "frp"}
-        }
-
+      "mark": {
+        "type": "circle",
+        "opacity": 0.8,
+        "stroke": "black",
+        "strokeWidth": 0.3
       },
-      {
-      "mark": "rule",
 
+      
       "encoding": {
-        "y":{"aggregate": "mean", "field": "brightness"},
+        "x": {
+          "field": "frp",
+          "type": "quantitative",
+          "title": "Fire Radiative Power (Megawatts)",
+          "axis": {"grid": false},
+          "scale": {"type": "log", "domain": [1, 5000]}
+        },
+        "y": {
+          "field": "brightness",
+          "type": "quantitative",
+          "axis": {"title": "Brightness (Kelvin)"}
+        },
+        "size": {
+          "field": "confidence",
+          "type": "quantitative",
+          "title": "Confidence (%)",
+          "legend": {"clipHeight": 30},
+          "scale": {"rangeMax": 100}
+        },
+        "color": {"field": "daynight", "type": "nominal", "title": "Day/Night", "condition": {"test": "datum['frp'] > 3000", "value":"#800000"}},
+
+        "tooltip": [
+          {"field": "frp", "title": "FRP (MW)", "type": "quantitative"},
+          {
+            "aggregate": "mean",
+            "field": "frp",
+            "title": "Average FRP (MW)",
+            "type": "quantitative"
+          },
+          {
+            "field": "brightness",
+            "title": "Brightness (K)",
+            "type": "quantitative"
+          },
+          {
+            "field": "confidence",
+            "title": "Confidence (%)",
+            "type": "quantitative"
+          }
+        ]
+      }
+    },
+    {
+      "mark": "rule",
+      "encoding": {
+        "x": {"aggregate": "mean", "field": "frp"},
         "color": {"value": "#800000"},
         "size": {"value": 3}
       }
+    },
+    {
+      "mark": {
+        "type": "text",
+        "style": "label",
+        "align": "left",
+        "dx": 3,
+        "font": "sans-serif"
       },
-
-      {
-        "mark": {"type": "text", "style": "label", "align": "left", "dx":-340, "dy": -10,"font":"sans-serif"},
-        "encoding": {
-          "y":{"aggregate": "mean", "field": "brightness"},
-          "text": {"aggregate": "mean", "field": "brightness"}
-        }
-
+      "encoding": {
+        "x": {"aggregate": "mean", "field": "frp"},
+        "text": {"aggregate": "mean", "field": "frp"}
       }
+    },
+    {
+      "mark": "rule",
+      "encoding": {
+        "y": {"aggregate": "mean", "field": "brightness"},
+        "color": {"value": "#800000"},
+        "size": {"value": 3}
+      }
+    },
+    {
+      "mark": {
+        "type": "text",
+        "style": "label",
+        "align": "left",
+        "dx": -340,
+        "dy": -10,
+        "font": "sans-serif"
+      },
+      "encoding": {
+        "y": {"aggregate": "mean", "field": "brightness"},
+        "text": {"aggregate": "mean", "field": "brightness"}
+      }
+    }
 
 
   ],
-
-"config": {"title": {"font": "sans-serif", "fontSize": 14}}
+  "config": {"title": {"font": "sans-serif", "fontSize": 14}}
 }
