@@ -54,7 +54,7 @@
                   "as": "text_annotation"
                 }
               ],
-              "mark": {"type": "text", "align": "left", "dx": 4, "fontsize":20},
+              "mark": {"type": "text", "align": "left", "dx": 4},
               "encoding": {"text": {"field": "text_annotation"}}
             }
           ]
@@ -114,5 +114,5 @@
       }
     }
   ],
-  "config": {"title": {"font": "sans-serif", "fontSize": 14}}
+  "config": {"title": {"font": "sans-serif", "fontSize": 20}}
 }
