@@ -50,10 +50,11 @@
           "x": "width",
           "text": "Above average FRP compared to previous years",
           "color": "#7f0000",
-          "fontSize":15
+          "fontSize":15,
+          "font":"sans-serif"
         }
       }]
     }
 ],
-    "config": {"title": {"font": "sans-serif", "fontSize": 14}}
+  "config": {"title": {"font": "sans-serif", "fontSize": 14}}
 }
