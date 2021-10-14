@@ -88,12 +88,7 @@
         },
         "tooltip": [
           {"field": "frp", "title": "FRP (MW)", "type": "quantitative"},
-          {
-            "aggregate": "mean",
-            "field": "frp",
-            "title": "Average FRP (MW)",
-            "type": "quantitative"
-          },
+          
           {
             "field": "brightness",
             "title": "Brightness (K)",
