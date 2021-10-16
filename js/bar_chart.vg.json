@@ -2,7 +2,7 @@
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "width": "container",
   "height": 600,
-  "data": {"url": "https://raw.githubusercontent.com/AprajitaBhasin/vega_lite/main/1_symbol_map/data/fire_archive_M6_96619.csv"},
+  "data": {"url": "https://raw.githubusercontent.com/AprajitaBhasin/vega_lite/main/data/fire_archive_M6_96619.csv"},
 
 "layer": [
   {"mark": {"type": "bar"},
