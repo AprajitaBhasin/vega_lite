@@ -19,11 +19,11 @@
       "aggregate": "mean",
       "field": "frp",
       "type": "quantitative",
-      "title": "Mean of Fire Radiative Power (MegaWatts)"
+      "title": "Mean of Fire Radiative Power (Megawatts)"
       },
     "tooltip":[
       {"aggregate":"mean","field": "frp", "title": "Mean of FRP (MW)", "type": "quantitative"},
-      {"field": "acq_date", "title":"Date of Acquisition", "type": "temporal"}
+      {"field": "acq_date", "title":"Data Acquisition Date", "type": "temporal"}
 
 
     ]}
@@ -45,7 +45,7 @@
           "type": "text",
           "align": "right",
           "baseline": "bottom",
-          "dx": -570,
+          "dx": -650,
           "dy": -3,
           "x": "width",
           "text": "Above average FRP compared to previous years",
