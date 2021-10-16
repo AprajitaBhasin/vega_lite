@@ -3,36 +3,36 @@
   "width": "container",
   "height": 600,
   "data": {"url": "https://raw.githubusercontent.com/AprajitaBhasin/vega_lite/main/1_symbol_map/data/fire_archive_M6_96619.csv"},
-  
+
 "layer": [
   {"mark": {"type": "bar"},
   "encoding": {
     "x": {
-      "timeUnit": "yearmonthdate", 
-      "title": "Date", 
-      "field": "acq_date", 
-      "type": "temporal", 
+      "timeUnit": "yearmonthdate",
+      "title": "Date",
+      "field": "acq_date",
+      "type": "temporal",
       "sort": "-y",
       "axis": {"title": "", "tickCount": 5, "grid": false}
       },
     "y": {
       "aggregate": "mean",
-      "field": "frp", 
+      "field": "frp",
       "type": "quantitative",
       "title": "Mean of Fire Radiative Power (MegaWatts)"
       },
-    "tooltip":[  
+    "tooltip":[
       {"aggregate":"mean","field": "frp", "title": "Mean of FRP (MW)", "type": "quantitative"},
       {"field": "acq_date", "title":"Date of Acquisition", "type": "temporal"}
 
-      
+
     ]}
 
   },
 
 
       {
-   
+
       "encoding": {
         "y": {"datum": 70}
       },
