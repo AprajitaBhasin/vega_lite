@@ -5,9 +5,8 @@
   },
   "vconcat": [
     {
-      "width": 900,
+      "width": "container",
       "height": 400,
-      "title": "A geographic representation of Australian fires from space",
       "projection": {"type": "equirectangular"},
       "layer": [
         {
@@ -24,6 +23,7 @@
             "latitude": {"field": "latitude", "type": "quantitative"},
             "color": {
               "field": "brightness",
+              "title": "Brightness (Kelvin)",
               "type": "quantitative",
               "scale": {
                 "type": "threshold",
@@ -51,7 +51,7 @@
                   "as": "text_annotation"
                 }
               ],
-              "mark": {"type": "text", "align": "left", "dx": 4},
+              "mark": {"type": "text", "align": "center", "dx": 4},
               "encoding": {"text": {"field": "text_annotation"}}
             }
           ]
