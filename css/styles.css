@@ -25,9 +25,33 @@
     width: 1024px;
     background-color: white;
     margin: auto;
-    padding: 50px;
     padding-top: 10px;
     font-family: 'Source Sans Pro', sans-serif;
+    font-size: 25px;
+    font-weight: bolder;
+}
+
+.bodytexttitle{
+
+    width: 1024px;
+    background-color: white;
+    margin: auto;
+    padding-top: 10px;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 20px;
+    color:#808080;
+    font-weight: bold;
+}
+.bodytext{
+
+    width: 1024px;
+    background-color: white;
+    margin: auto;
+    padding-top: 10px;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 18px;
+    color:#808080;
+
 }
 
 .hr3 {
@@ -44,43 +68,9 @@ html, body {
     padding:0;
 }
 
-section {
-    display: block;
-    background: #CFF;
-    height:100%;
-    width:100%;
-    padding: 60px;
-    padding-left: 120px;
-    box-sizing:border-box;
-}
-
-#one {
-    background: #111816;
-    color: #fff;
-    font-size: 30px;
-}
-
-#two {
-    background: #123037;
-    color: #fff;
-    font-size: 30px;
-}
-#three {
-    background: #74BE98;
-    font-size: 30px;
-}
-#four {
-    background: #BED28D;
-    font-size: 30px;
-}
-#five {
-    background: #95211D;
-    color: #fff;
-    font-size: 30px;
-}
 nav {
     position: fixed;
-}
+    font-family: 'Source Sans Pro', sans-serif;}
 nav a {
     display: block;
     font-size: 12px;
@@ -90,3 +80,48 @@ nav a {
     padding: 10px;
     margin: 3px;
 }
+
+
+section {
+    display: block;
+    height:100%;
+    width:100%;
+    padding: 60px;
+    padding-left: 120px;
+    box-sizing:border-box;
+    font-family: 'Source Sans Pro', sans-serif;
+}
+#one {
+
+    color: #FFFAF0;
+    font-size: 60px;
+    font-weight: 900;
+    background-image: url('https://www.observerbd.com/2020/01/04/observerbd.com_1578161244.jpg');
+    background-position: left;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding-top: 375px;
+
+}
+
+
+
+#two {
+    width: 1024px;
+    background-color: white;
+    margin: auto;
+    padding: 50px;
+    padding-top: 10px;
+    font-family: 'Source Sans Pro', sans-serif;
+    color: #fff;
+
+}
+#three {
+    background: white;
+
+}
+#four {
+    background: white;
+    font-size: 30px;
+}
+
