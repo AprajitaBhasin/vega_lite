@@ -101,7 +101,7 @@
 
           {
             "field": "acq_date",
-            "title": "Date of data acquisition",
+            "title": "Data Acquisition Date",
             "type": "temporal"
           }
         ]
