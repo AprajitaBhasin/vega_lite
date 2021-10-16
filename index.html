@@ -16,113 +16,159 @@
 <!-- CSS file -->
 <link rel="stylesheet" type="text/css" href="css/styles.css" media="all">
 
-<!-- Page title                                -->
-<title>Fires from Space:Australia</title>
+<!-- Tab Name                                -->
+<title>Fires from Space: Australia</title>
 
 </head>
 <body>
+  <!-- Navigation Bar-->
+  <nav> <a href="#one", style="color:#B22222"><strong>Fires from Space: Australia</strong></a>
+  <a href="#two">Geographical Representation + Overview + Detail</a>
+  <a href="#three">FRP + Brightness + Confidence</a>
+  <a href="#four">Mean FRP across the time period</a>
+  </nav>
+  <!-- Navigation Bar End-->
 
-    <nav> <a href="#one", style="color:#B22222"><strong>Fires from Space: Australia</strong></a>
-    <a href="#two">Geographical Representation + Overview + Detail</a>
-    <a href="#three">FRP + Brightness + Confidence</a>
-    <a href="#four">Mean FRP across the time period</a>
-    </nav>
+  <!--Title page with bushfire background-->
+  <section id="one", style="text-align:center">
+    <span style="color:#B22222">Fires </span>from Space: Australia
 
-    <section id="one", style="text-align:center">
-      <span style="color:#B22222">Fires </span>from Space: Australia
-
-    </section>
-    <div class="page">
+  </section>
+  <!--Title Page end  -->
 
 
-      <p style="text-align:center">
-        This visualisation will analyse the <span style="color:#B22222">fires </span> in Australia recognised from space from 01/08/2019 to 30/09/2019. It will use the
-        <span style="color:#B22222">fire </span> locations
-        processed by the University of Maryland and the thermal anomalies captured by NASA FIRMS MODIS. <br>
-        <br>
-        <span style="color: #696969">It will mainly use the data obtained on variables such as
-        <span style="color:#CD5C5C">brightness</span>, date, location<br>
-        <span style="color:#CD5C5C"> fire radiative power</span>, part of the day the fire occurred and the level of<br>
-          confidence (%) that the fire took place to not only analyse but also <br>
-          retrospectively investigate if the findings via the satellite are in
-          <br>line with expections.
-          </span>
-        </p>
+  <!--Background Information + Intro to Story-->
+  <div class="page">
 
+
+    <p style="text-align:center">
+      Due to the upcoming bushfire season in Australia, it is important to have a look <br>
+      at historical data to understand the high-risk areas, the number of <span style="color:#B22222">fires</span> that occurred <br>
+      and the <span style="color:#B22222">brightness</span> distribution. Furthermore, as the reliance on technology<br>
+      is increasing, it is important to take a look at the data acquired from the satellites<br>
+      and confirm if they are in line with our expectations. <br>
+      <br>
+      Thus, this visualisation will analyse the <span style="color:#B22222">fires </span> in Australia recognised from space from 01/08/2019 to 30/09/2019. It will use the
+      <span style="color:#B22222">fire </span> locations
+      processed by the University of Maryland and the thermal anomalies captured by NASA FIRMS MODIS. <br>
+      <br>
+      <span style="color: #696969">It will mainly use the data obtained on variables such as
+      <span style="color:#CD5C5C">brightness</span>, date, location<br>
+      <span style="color:#CD5C5C"> fire radiative power</span>, part of the day the fire occurred and the level of<br>
+        confidence (%) that the fire took place to not only analyse but also <br>
+        retrospectively investigate if the findings via the satellite are in
+        <br>line with expections.
+        </span>
+      </p>
+
+  </div>
+  <!--Background Information + Intro to Story End-->
+
+  <!--Symbol+Overview+Detail-->
+
+  <section id="two">
+    <!-- Graph Name -->
+    <div class="bodytexttitle", style="text-align:center">
+
+    A geographical representation of Australian fires from space
+    </div>
+    <!-- Graph Name End-->
+
+    <!--Intro to Graph -->
+    <div class="bodytext", style="text-align:center">
+    This graph geographically maps the fires throughout the period outlined with the <br>
+    colour revealing the <span style="color:#CD5C5C">brightness</span> of the fires. It will identify the high-risk areas <br>
+    and if they are in-line with expectations. <br><br> Furthermore, the fires can be
+    <strong>filtered</strong> according to the dates to reveal the <span style="color:#CD5C5C">brightness</span><br>
+    and the count of those respective <span style="color:#CD5C5C">brightness</span> bins.
+    </div>
+    <!--Intro to Graph End -->
+
+    <!-- pure grid group -->
+    <div class="pure-g">
+        <div class="pure-u-1-1">
+            <div id="symbol_map" class="vis-container"></div>
+        </div>
+    </div>
+    <!-- end pure grid group -->
+
+    <!-- Graph Analysis-->
+    <div class="bodytext", style="text-align:center">
+    The geographical map reveal that the majority of the fires recognised from space<br>
+    are <strong>centred</strong> around <a href="https://www.tern.org.au/wp-content/uploads/image-166.png" target="_blank", style="color:#228B22"> high vegetation areas</a>.
+    Furthermore, the high count of fires is<br>
+    <a href = "http://www.bom.gov.au/climate/current/month/aus/archive/201909.summary.shtml"target="_blank", style="color:#808080">in line with expectations</a>.
+    </div>
+    <!-- Graph Analysis End-->
+
+  </section>
+  <!--Symbol+Overview+Detail End-->
+
+
+  <!--Bubble Chart-->
+  <section id="three">
+    <!--Title -->
+    <div class="bodytexttitle", style="text-align:center">
+    <br>
+    <br>
+    <br>
+    An analysis of <span style="color:#CD5C5C">FRP</span>, <span style="color:#CD5C5C">brightness</span> and confidence
+    </div>
+    <!--Title End-->
+
+    <!--Graph Intro-->
+    <div class="bodytext", style="text-align:center">
+    This zoomable graph shows the relationship between the variables: confidence, <span style="color:#CD5C5C">brightness</span>, <br>
+    <span style="color:#e7ba52">day</span>/<span style="color:#696969">night</span> and <span style="color:#CD5C5C">FRP</span>.
+    The fire with the highest <span style="color:#CD5C5C">FRP</span> has been highlighted and <br>
+    the <span style="color: #7f0000">red lines</span> represent the <span style="color: black"><b>means</b></span> of their axis. It takes a look if the<br>
+    relationship between these variables is <b>logically correct</b> to confirm<br>
+    that the measurements are <b>appropriate</b>. This is an important test if we are to <b>completely</b> rely<br>
+    on the satellites for measurements for future bushfire seasons.
+    </div>
+    <!-- Graph Intro End-->
+
+    <!-- pure grid group -->
+    <div class="pure-g">
+        <div class="pure-u-1-1">
+            <div id="bubble_map" class="vis-container"></div>
+        </div>
+    </div>
+    <!-- end pure grid group -->
+
+    <!-- Graph Analysis-->
+
+    <div class="bodytext", style="text-align:center">
+    This graph shows how the confidence <strong>increases</strong> as the <span style="color:#CD5C5C">FRP</span> and <span style="color:#CD5C5C">brightness</span> of the fire <strong>increases</strong>.<br>
+    Additionally, on average, <strong>more</strong> biomass is being consumed during the day with higher <span style="color:#CD5C5C">brightness</span> <br>
+    and confidence levels. This is hand with the date  of the <span style="color:#CD5C5C">highlighted</span> point,<br>
+    makes the data
+    <a href = "https://www.theguardian.com/australia-news/video/2019/sep/12/australia-bushfires-hundreds-evacuated-in-worst-start-to-season-on-record-video"target="_blank", style="color:#808080">in line with expectations</a>.
     </div>
 
+    <!--Graph Analysis End -->
 
-    <section id="two">
+  </section>
+
+  <!-- Bubble Chart End-->
+
+
+  <!-- Bar Chart-->
+
+  <section id="four">
+      <!--Title -->
       <div class="bodytexttitle", style="text-align:center">
-
-      A geographical representation of Australian fires from space
+      <span style="color:#CD5C5C">Mean FRP</span> across the time period
       </div>
+      <!--Title End-->
 
+      <!--Graph Intro -->
       <div class="bodytext", style="text-align:center">
-      This graph geographically maps the fires throughout the period outlined with the <br>
-      colour revealing the <span style="color:#CD5C5C">brightness</span> of the fires. Furthermore, the fires can be<br>
-      <strong>filtered</strong> according to the dates to reveal the <span style="color:#CD5C5C">brightness</span> and the count <br>
-      of those respective <span style="color:#CD5C5C">brightness</span> bins.
+      This graph compares the <span style="color:#CD5C5C"> mean FRP</span> of the dataset to <span style="color: #7f0000">previous years</span> to identify the anomalous fires.<br>
+      This aids in identifying the <b>conditions</b> which led to higher than normal readings for future reference.<br>
       </div>
+      <!--Graph Intro End-->
 
-      <!-- pure grid group -->
-      <div class="pure-g">
-          <div class="pure-u-1-1">
-              <div id="symbol_map" class="vis-container"></div>
-          </div>
-      </div>
-
-      <div class="bodytext", style="text-align:center">
-      The geographical map reveal that the majority of the fires recognised from space<br>
-      are <strong>centred</strong> around <a href="https://www.tern.org.au/wp-content/uploads/image-166.png" target="_blank", style="color:#228B22"> high vegetation areas</a>.
-      Furthermore, the high count of fires is<br>
-      <a href = "http://www.bom.gov.au/climate/current/month/aus/archive/201909.summary.shtml"target="_blank", style="color:#808080">in line with expectations</a>.
-      </div>
-
-    </section>
-
-
-        <!-- end pure grid group -->
-
-    <section id="three">
-      <div class="bodytexttitle", style="text-align:center">
-      <br>
-      <br>
-      An analysis of <span style="color:#CD5C5C">FRP</span>, <span style="color:#CD5C5C">brightness</span> and confidence
-      </div>
-
-      <div class="bodytext", style="text-align:center">
-      This zoomable graph shows the relationship between the variables: confidence, <span style="color:#CD5C5C">brightness</span>, <br>
-      <span style="color:#e7ba52">day</span>/<span style="color:#696969">night</span> and <span style="color:#CD5C5C">FRP</span>.
-      The fire with the highest <span style="color:#CD5C5C">FRP</span> has been highlighted.
-      </div>
-      <!-- pure grid group -->
-      <div class="pure-g">
-          <div class="pure-u-1-1">
-              <div id="bubble_map" class="vis-container"></div>
-          </div>
-      </div>
-      <!-- end pure grid group -->
-
-      <div class="bodytext", style="text-align:center">
-      This graph shows how the confidence <strong>increases</strong> as the <span style="color:#CD5C5C">FRP</span> and <span style="color:#CD5C5C">brightness</span> of the fire <strong>increases</strong>.<br>
-      Additionally, on average, <strong>more</strong> biomass is being consumed during the day with higher <span style="color:#CD5C5C">brightness</span> <br>
-      and confidence levels. This is hand with the date  of the <span style="color:#CD5C5C">highlighted</span> point,<br>
-      makes the data
-      <a href = "https://www.theguardian.com/australia-news/video/2019/sep/12/australia-bushfires-hundreds-evacuated-in-worst-start-to-season-on-record-video"target="_blank", style="color:#808080">in line with expectations</a>.
-
-      </div>
-    </section>
-
-
-    <section id="four">
-        <div class="bodytexttitle", style="text-align:center">
-        Mean <span style="color:#CD5C5C">FRP</span> across the time period
-        </div>
-
-        <div class="bodytext", style="text-align:center">
-        This graph compares the mean FRP of the dataset to previous years to identify the anomalous fires.
-        </div>
         <!-- pure grid group -->
         <div class="pure-g">
             <div class="pure-u-1-1">
@@ -131,29 +177,60 @@
         </div>
         <!-- end pure grid group -->
 
+        <!-- Graph Analysis-->
+
         <div class="bodytext", style="text-align:center">
-        This graph shows how the confidence <strong>increases</strong> as the <span style="color:#CD5C5C">FRP</span> and <span style="color:#CD5C5C">brightness</span> of the fire <strong>increases</strong>.<br>
-        Additionally, on average, <strong>more</strong> biomass is being consumed during the day with higher <span style="color:#CD5C5C">brightness</span> <br>
-        and confidence levels. This is hand with the date  of the <span style="color:#CD5C5C">highlighted</span> point,<br>
-        makes the data
-        <a href = "https://www.theguardian.com/australia-news/video/2019/sep/12/australia-bushfires-hundreds-evacuated-in-worst-start-to-season-on-record-video"target="_blank", style="color:#808080">in line with expectations</a>.
+        <strong><u>Dates above average FRP from previous years</u></strong><br>
+        <b>August 28, 2019:</b> The first day above the average threshold marked Australia preparing<br>
+        for a
+        <a href = "https://www.smh.com.au/national/australia-faces-very-active-bushfire-season-20190828-p52lqi.html"target="_blank", style="color:#808080">worse bushfire season than normal </a><br>
+        <br>
+        <b>September 06, 2019:</b> Australia experiences hot and windy conditions as
+       <a href = "https://www.theguardian.com/australia-news/2019/sep/06/homes-destroyed-as-four-out-of-control-bushfires-burning-across-nsw"target="_blank", style="color:#808080"> bushfires rage on</a>
+        <br>
+        <br>
+        <b>September 12, 2019:</b> Australia fights to gain control of the
+       <a href = "https://www.theguardian.com/australia-news/video/2019/sep/12/australia-bushfires-hundreds-evacuated-in-worst-start-to-season-on-record-video"target="_blank", style="color:#808080"> bushfires</a>
+        <br>
+        <br>
+        <b>September 20, 2019:</b> Australia continues to battle
+       <a href = "https://www.theguardian.com/australia-news/2019/sep/14/temperatures-10-degrees-above-average-forecast-as-130-bushfires-continue-to-burn"target="_blank", style="color:#808080"> hot and dry conditions</a>
+
+        <br>
+        <br>
+        <b>September 30, 2019:</b>
+       <a href = "https://www.couriermail.com.au/news/queensland/warwick/fireys-work-to-protect-property-east-of-warwick/news-story/1b78e3be76a2a5d3b7f1d8a41f34b752"target="_blank", style="color:#808080"> Bushfires continue</a>
+
         </div>
+
+      <!--Graph Analysis End-->
     </section>
 
+    <!-- Bar Chart End -->
+
+    <div class="reference", style="text-align:center">
+    <br>
+    <br>
+    <br>
+    <br>
+    Dataset obtained from:'https://www.kaggle.com/carlosparadis/fires-from-space-australia-and-new-zeland'
+    </div>
+
+    <!--Add in data visualisations-->
     <script type="text/javascript">
 
       var specVis1 = "js/symbol_map.vg.json";
-      vegaEmbed('#symbol_map', specVis1);
+      vegaEmbed('#symbol_map', specVis1, {"actions": false});
 
       var specVis2 = "js/bubble_map.vg.json";
-        vegaEmbed('#bubble_map', specVis2);
+        vegaEmbed('#bubble_map', specVis2, {"actions": false});
 
       var specVis3 = "js/bar_chart.vg.json";
-        vegaEmbed('#bar_chart', specVis3);
+        vegaEmbed('#bar_chart', specVis3, {"actions": false});
 
       print(brush)
 
     </script>
-
+    <!--Add in data visualisations End -->
 </body>
 </html>
