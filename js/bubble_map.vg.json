@@ -13,7 +13,7 @@
         "max": 100,
         "step": 10,
         "name": "Minimum Confidence: "
-      }
+   }
     },
     {
       "name": "daynight_selection",
@@ -25,17 +25,16 @@
       }
     }
   ],
-  "width": 900,
+  "width": "container",
   "height": 400,
-  "title": "An analysis of FRP, Brightness and Confidence",
   "transform": [
     {"filter": "datum.frp > 0"},
-    {"filter": "datum.confidence > Confidence_above"},
+    {"filter": "datum.confidence >= Confidence_above"},
     {
       "filter": "daynight_selection == null || datum.daynight == daynight_selection"
     }
   ],
-  
+
 
   "layer": [
     {"params":[
@@ -47,8 +46,8 @@
 
     }
     ],
- 
-    
+
+
       "mark": {
         "type": "circle",
         "opacity": 0.6,
@@ -88,7 +87,7 @@
         },
         "tooltip": [
           {"field": "frp", "title": "FRP (MW)", "type": "quantitative"},
-          
+
           {
             "field": "brightness",
             "title": "Brightness (K)",
@@ -98,6 +97,12 @@
             "field": "confidence",
             "title": "Confidence (%)",
             "type": "quantitative"
+          },
+
+          {
+            "field": "acq_date",
+            "title": "Date of data acquisition",
+            "type": "temporal"
           }
         ]
       }
@@ -138,7 +143,7 @@
         "type": "text",
         "style": "label",
         "align": "left",
-        "dx": -400,
+        "dx": -550,
         "dy": -10,
         "font": "sans-serif",
         "fontWeight":"bold"
