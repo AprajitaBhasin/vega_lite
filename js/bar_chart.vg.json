@@ -13,10 +13,7 @@
     {   
       
       "params": [
-      {
-        "name": "highlight",
-        "select": {"type": "point", "on": "mouseover"}
-      },
+ 
       {"name": "select", "select": "point"}
       ],
     
@@ -59,13 +56,9 @@
             {
               "param": "select",
               "empty": false,
-              "value": 2
-            },
-            {
-              "param": "highlight",
-              "empty": false,
               "value": 1
             }
+
           ],
           "value": 0
           }
