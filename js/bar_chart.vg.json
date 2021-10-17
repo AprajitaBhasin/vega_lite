@@ -2,59 +2,96 @@
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "width": "container",
   "height": 600,
-  "data": {"url": "https://raw.githubusercontent.com/AprajitaBhasin/vega_lite/main/data/fire_archive_M6_96619.csv"},
-
-"layer": [
-  {"mark": {"type": "bar"},
-  "encoding": {
-    "x": {
-      "timeUnit": "yearmonthdate",
-      "title": "Date",
-      "field": "acq_date",
-      "type": "temporal",
-      "sort": "-y",
-      "axis": {"title": "", "tickCount": 5, "grid": false}
-      },
-    "y": {
-      "aggregate": "mean",
-      "field": "frp",
-      "type": "quantitative",
-      "title": "Mean of Fire Radiative Power (Megawatts)"
-      },
-    "tooltip":[
-      {"aggregate":"mean","field": "frp", "title": "Mean of FRP (MW)", "type": "quantitative"},
-      {"field": "acq_date", "title":"Data Acquisition Date", "type": "temporal"}
-
-
-    ]}
-
+  "data": {
+    "url": "https://raw.githubusercontent.com/AprajitaBhasin/vega_lite/main/data/fire_archive_M6_96619.csv"
   },
 
 
-      {
 
-      "encoding": {
-        "y": {"datum": 70}
+  "layer": [
+
+    {   
+      
+      "params": [
+      {
+        "name": "highlight",
+        "select": {"type": "point", "on": "mouseover"}
       },
-      "layer": [{
-        "mark": {
-          "type":"rule",
-        "color": "#7f0000"
-      }}, {
-        "mark": {
-          "type": "text",
-          "align": "right",
-          "baseline": "bottom",
-          "dx": -650,
-          "dy": -3,
-          "x": "width",
-          "text": "Above average FRP compared to previous years",
-          "color": "#7f0000",
-          "fontSize":15,
-          "font":"sans-serif"
+      {"name": "select", "select": "point"}
+      ],
+    
+    
+      "mark": {"type": "bar"},
+      "encoding": {
+        "x": {
+          "timeUnit": "yearmonthdate",
+          "title": "Date",
+          "field": "acq_date",
+          "type": "temporal",
+          "sort": "-y",
+          "axis": {"title": "", "tickCount": 5, "grid": false}
+        },
+        "y": {
+          "aggregate": "mean",
+          "field": "frp",
+          "type": "quantitative",
+          "title": "Mean of Fire Radiative Power (Megawatts)"
+        },
+        "tooltip": [
+          {
+            "aggregate": "mean",
+            "field": "frp",
+            "title": "Mean of FRP (MW)",
+            "type": "quantitative"
+          },
+          {
+            "field": "acq_date",
+            "title": "Data Acquisition Date",
+            "type": "temporal"
+          }
+        ],
+        "fillOpacity": {
+          "condition": {"param": "select", "value": 1},
+          "value": 0.3
+        },
+        "strokeWidth": {
+          "condition": [
+            {
+              "param": "select",
+              "empty": false,
+              "value": 2
+            },
+            {
+              "param": "highlight",
+              "empty": false,
+              "value": 1
+            }
+          ],
+          "value": 0
+          }
+      
+      }
+    },
+    {
+      "encoding": {"y": {"datum": 70}},
+      "layer": [
+        {"mark": {"type": "rule", "color": "#7f0000"}},
+        {
+          "mark": {
+            "type": "text",
+            "align": "right",
+            "baseline": "bottom",
+            "dx": -650,
+            "dy": -3,
+            "x": "width",
+            "text": "Above average FRP compared to previous years",
+            "color": "#7f0000",
+            "fontSize": 15,
+            "font": "sans-serif"
+          }
         }
-      }]
+      ]
     }
-],
+  ],
   "config": {"title": {"font": "sans-serif", "fontSize": 14}}
 }
