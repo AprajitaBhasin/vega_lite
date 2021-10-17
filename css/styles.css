@@ -4,13 +4,12 @@
 
 
 .page {
-    width: 1024px;
+
     background-color: white;
     margin: auto;
     padding-top: 10px;
     font-family: 'Source Sans Pro', sans-serif;
-    font-size: 25px;
-    font-weight: bolder;
+
 }
 
 .bodytexttitle{
