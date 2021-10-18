@@ -86,7 +86,7 @@
           }
         },
         "tooltip": [
-          {"field": "frp", "title": "FRP (MW)", "type": "quantitative"},
+          {"field": "frp", "title": "FRP (MW)", "type": "quantitative", "format": ","},
 
           {
             "field": "brightness",
