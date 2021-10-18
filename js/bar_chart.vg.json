@@ -63,7 +63,7 @@
             "type": "text",
             "align": "right",
             "baseline": "bottom",
-            "dx": 0,
+            "dx": -650,
             "dy": -3,
             "x": "width",
             "text": "Above average FRP compared to previous years",
