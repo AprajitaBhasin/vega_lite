@@ -50,18 +50,7 @@
         "fillOpacity": {
           "condition": {"param": "select", "value": 1},
           "value": 0.3
-        },
-        "strokeWidth": {
-          "condition": [
-            {
-              "param": "select",
-              "empty": false,
-              "value": 1
-            }
-
-          ],
-          "value": 0
-          }
+        }
       
       }
     },
@@ -74,7 +63,7 @@
             "type": "text",
             "align": "right",
             "baseline": "bottom",
-            "dx": -650,
+            "dx": 0,
             "dy": -3,
             "x": "width",
             "text": "Above average FRP compared to previous years",
